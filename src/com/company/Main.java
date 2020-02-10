@@ -54,6 +54,11 @@ public class Main {
         System.out.println(f1);
         System.out.println(f2);
         System.out.println(f3);
+
+        SoccerTeam t1 = new SoccerTeam();
+        SoccerTeam t2 = new SoccerTeam();
+        SoccerTeam t3 = new SoccerTeam();
+        SoccerTeam t4 = new SoccerTeam();
     }
 }
 
