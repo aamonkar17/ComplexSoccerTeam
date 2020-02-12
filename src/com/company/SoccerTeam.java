@@ -44,10 +44,10 @@ public class SoccerTeam {
         loss = 0;
         return score;
     }
-    public int getScoreOfTeam(){
+    public static int getScoreOfTeam(){
         return scoreOfTeam;
     }
-    public int getNumGames(){
+    public static int getNumGames(){
         return numGames;
     }
     public static void startTournament(){

@@ -62,7 +62,7 @@ public class Main {
         SoccerTeam t2 = new SoccerTeam();
         SoccerTeam t3 = new SoccerTeam();
         SoccerTeam t4 = new SoccerTeam();
-        t1.startTournament();
+        SoccerTeam.startTournament();
 
         t1.played(t2, 1, 5);
         t1.played(t2, 3, 3);
@@ -100,7 +100,7 @@ public class Main {
         t2.reset();
         t3.reset();
         t4.reset();
-        t1.startTournament();
+        SoccerTeam.startTournament();
 
         t1.played(t2, 4, 5);
         t1.played(t2, 4, 4);
@@ -130,8 +130,13 @@ public class Main {
         System.out.println(t2.numberPts());
         System.out.println(t3.numberPts());
         System.out.println(t4.numberPts());
-        System.out.println(t1.getScoreOfTeam());
-        System.out.println(t1.getNumGames());
+        System.out.println(SoccerTeam.getScoreOfTeam());
+        System.out.println(SoccerTeam.getNumGames());
+
+        t1.reset();
+        t2.reset();
+        t3.reset();
+        t4.reset();
 
     }
 }
@@ -158,7 +163,6 @@ Complex:
 2.0 + 0.0i
 0.0 + 0.0i
 -0.0 + -0.0i
-
 
 SoccerTeam:
 12
