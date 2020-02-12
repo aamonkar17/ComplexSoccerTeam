@@ -1,11 +1,14 @@
+//Ankit Amonkar
+//3B AP Computer Science
+//SoccerTeam Class
 package com.company;
 
 public class SoccerTeam {
     private int wins;
     private int loss;
     private int tie;
-    private static int scoreOfTeam = 0;
-    private static int numGames = 0;
+    public static int scoreOfTeam = 0;
+    public static int numGames = 0;
 
     public SoccerTeam(){
         wins = 0;
@@ -16,7 +19,7 @@ public class SoccerTeam {
         if(myScore>otherScore){
             this.wins++;
             other.loss++;
-            scoreOfTeam = scoreOfTeam + 4;
+            scoreOfTeam = scoreOfTeam + 3;
         }
         else if(myScore == otherScore){
             this.tie++;
@@ -26,19 +29,28 @@ public class SoccerTeam {
         else{
             this.loss++;
             other.wins++;
-            scoreOfTeam = scoreOfTeam + 4;
+            scoreOfTeam = scoreOfTeam + 3;
             }
         numGames++;
     }
-    public int numberPts(SoccerTeam a){
-        int score = wins*3 + tie*1;
+    public int numberPts(){
+        int score = wins*3 + tie;
         return score;
     }
-    public int reset(SoccerTeam a){
+    public int reset(){
         int score = 0;
+        wins = 0;
+        tie = 0;
+        loss = 0;
         return score;
     }
-    private static void startTournament(){
+    public int getScoreOfTeam(){
+        return scoreOfTeam;
+    }
+    public int getNumGames(){
+        return numGames;
+    }
+    public static void startTournament(){
         numGames = 0;
         scoreOfTeam = 0;
     }

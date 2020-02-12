@@ -1,3 +1,6 @@
+//Ankit Amonkar
+//3B AP Computer Science
+//Main Class
 package com.company;
 
 public class Main {
@@ -59,20 +62,116 @@ public class Main {
         SoccerTeam t2 = new SoccerTeam();
         SoccerTeam t3 = new SoccerTeam();
         SoccerTeam t4 = new SoccerTeam();
+        t1.startTournament();
+
+        t1.played(t2, 1, 5);
+        t1.played(t2, 3, 3);
+        t1.played(t2, 9, 1);
+
+        t2.played(t3, 2, 6);
+        t2.played(t3, 4, 4);
+        t2.played(t3, 5, 3);
+
+        t3.played(t4, 3, 4);
+        t3.played(t4, 2, 2);
+        t3.played(t4, 6, 4);
+
+        t1.played(t3, 7, 9);
+        t1.played(t3, 1, 1);
+        t1.played(t3, 7, 0);
+
+        t1.played(t4, 0, 1);
+        t1.played(t4, 0, 0);
+        t1.played(t4, 2, 1);
+
+        t2.played(t4, 1, 5);
+        t2.played(t4, 3, 3);
+        t2.played(t4, 9, 1);
+
+
+        System.out.println("\n" + t1.numberPts());
+        System.out.println(t2.numberPts());
+        System.out.println(t3.numberPts());
+        System.out.println(t4.numberPts());
+        System.out.println(t1.getScoreOfTeam());
+        System.out.println(t1.getNumGames());
+
+        t1.reset();
+        t2.reset();
+        t3.reset();
+        t4.reset();
+        t1.startTournament();
+
+        t1.played(t2, 4, 5);
+        t1.played(t2, 4, 4);
+        t1.played(t2, 4, 2);
+
+        t2.played(t3, 1, 5);
+        t2.played(t3, 3, 3);
+        t2.played(t3, 3, 2);
+
+        t3.played(t4, 3, 5);
+        t3.played(t4, 1, 1);
+        t3.played(t4, 7, 4);
+
+        t1.played(t3, 4, 9);
+        t1.played(t3, 1, 1);
+        t1.played(t3, 2, 0);
+
+        t1.played(t4, 0, 1);
+        t1.played(t4, 0, 0);
+        t1.played(t4, 2, 1);
+
+        t2.played(t4, 0, 4);
+        t2.played(t4, 9, 9);
+        t2.played(t4, 2, 1);
+
+        System.out.println("\n" + t1.numberPts());
+        System.out.println(t2.numberPts());
+        System.out.println(t3.numberPts());
+        System.out.println(t4.numberPts());
+        System.out.println(t1.getScoreOfTeam());
+        System.out.println(t1.getNumGames());
+
     }
 }
 
 /*Results
+Complex:
 5.0
 5.0 + 5.0i
+2.0 + 11.0i
+15.0 + 20.0i
 25.0
 9.0 + 31.0i
+-154.0 + 97.0i
 2.0
 2.0 + 1.0i
-0.0
-0.0 + 0.0i
+0.0 + 2.0i
+5.0
+-3.0 + -4.0i
+0.0 + -0.0i
 1.0
-0.0 + 1.0i
+-3.0 + -3.0i
+4.0 + -3.0i
 0.0
 2.0 + 0.0i
+0.0 + 0.0i
+-0.0 + -0.0i
+
+
+SoccerTeam:
+12
+12
+12
+12
+48
+18
+
+12
+12
+12
+12
+48
+18
 */
